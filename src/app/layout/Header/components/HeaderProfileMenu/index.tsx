@@ -12,7 +12,7 @@ export default function HeaderProfileMenu() {
   return (
     <div className="relative">
       <button ref={toggleRef} onClick={toggleTarget}>
-        <LuUser size={20} />
+        <LuUser size={24} />
       </button>
       {targetActive && (
         <div
