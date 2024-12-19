@@ -25,8 +25,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  auth,
   children,
 }: Readonly<{
+  auth: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
@@ -37,6 +39,7 @@ export default function RootLayout({
         <div className="flex min-h-screen min-w-full flex-col">
           <Header />
           <ProgressBar />
+          <div>{auth}</div>
           <div className="flex min-w-full flex-1 flex-col">{children}</div>
         </div>
       </body>

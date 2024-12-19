@@ -42,7 +42,7 @@ export default function Header() {
           </div>
           <HeaderProfileMenu />
           <Link
-            href="/"
+            href="/sign-in"
             className="flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-medium text-white"
           >
             Sign In
