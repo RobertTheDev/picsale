@@ -26,9 +26,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   auth,
+  basket,
   children,
 }: Readonly<{
   auth: React.ReactNode;
+  basket: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
@@ -40,6 +42,7 @@ export default function RootLayout({
           <Header />
           <ProgressBar />
           <div>{auth}</div>
+          <div>{basket}</div>
           <div className="flex min-w-full flex-1 flex-col">{children}</div>
         </div>
       </body>
