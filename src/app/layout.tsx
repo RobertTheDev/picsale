@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from './layout/Header';
+import ProgressBar from './layout/ProgressBar';
 import company from './lib/company';
 
 const geistSans = Geist({
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen min-w-full flex-col">
           <Header />
+          <ProgressBar />
           <div className="flex min-w-full flex-1 flex-col">{children}</div>
         </div>
       </body>
