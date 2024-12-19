@@ -30,11 +30,23 @@ export default function Header() {
         <div className="flex items-center gap-8">
           <div>
             <Link href="/basket">
-              <LuShoppingBasket size={20} />
+              <div className="relative">
+                <div className="absolute right-[-6px] top-[-6px] flex size-4 items-center justify-center rounded-full bg-blue-600">
+                  <p className="text-sm text-white">4</p>
+                </div>
+                <div>
+                  <LuShoppingBasket size={24} />
+                </div>
+              </div>
             </Link>
           </div>
-
           <HeaderProfileMenu />
+          <Link
+            href="/"
+            className="flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-medium text-white"
+          >
+            Sign In
+          </Link>
         </div>
       </div>
     </header>
