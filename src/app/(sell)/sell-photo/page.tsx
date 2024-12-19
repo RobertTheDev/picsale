@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sell Photo',
+};
+
 export default function SellPhotoPage() {
   return (
     <main>

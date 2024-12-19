@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sales Summary',
+};
+
 export default function SalesSummary() {
   return (
     <main>

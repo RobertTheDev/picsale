@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Connected Accounts',
+};
+
 export default function ConnectedAccountsPage() {
   return (
     <main>
