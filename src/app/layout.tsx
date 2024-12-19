@@ -28,10 +28,12 @@ export default function RootLayout({
   auth,
   basket,
   children,
+  photos,
 }: Readonly<{
   auth: React.ReactNode;
   basket: React.ReactNode;
   children: React.ReactNode;
+  photos: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -43,6 +45,7 @@ export default function RootLayout({
           <ProgressBar />
           <div>{auth}</div>
           <div>{basket}</div>
+          <div>{photos}</div>
           <div className="flex min-w-full flex-1 flex-col">{children}</div>
         </div>
       </body>
