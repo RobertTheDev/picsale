@@ -9,7 +9,7 @@ export default function Page() {
   const pathName = usePathname();
 
   useEffect(() => {
-    if (pathName === '/basket') {
+    if (pathName) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -18,7 +18,7 @@ export default function Page() {
     return () => {
       document.body.style.overflow = '';
     };
-  }, []);
+  }, [pathName]);
 
   return (
     <div className="fixed left-0 top-0 z-[66] flex min-h-screen min-w-full items-center justify-center bg-[rgba(0,0,0,0.5)]">
