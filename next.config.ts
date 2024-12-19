@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/settings',
+        destination: '/edit-profile',
+        permanent: true,
+      },
     ];
   },
 };
