@@ -1,15 +1,16 @@
 import { photos } from '@/app/data/photos';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import { LuDownload } from 'react-icons/lu';
 
 export const metadata: Metadata = {
-  title: 'Orders',
+  title: 'Purchases',
 };
 
-export default function OrdersPage() {
+export default function PurchasesPage() {
   return (
     <main className="flex flex-col px-8">
-      <h1 className="mt-8 text-3xl font-bold">Orders</h1>
+      <h1 className="mt-8 text-3xl font-bold">Purchases</h1>
       <div className="mt-8 flex w-full flex-col">
         <div className="overflow-x-auto">
           <table className="min-w-full border-collapse border border-gray-200">
@@ -19,7 +20,7 @@ export default function OrdersPage() {
                   Product
                 </th>
                 <th className="border border-gray-300 px-4 py-2 text-left">
-                  Sale Date
+                  Purchase Date
                 </th>
                 <th className="border border-gray-300 px-4 py-2 text-left">
                   Price
@@ -50,7 +51,9 @@ export default function OrdersPage() {
                   </td>
                   <td className="border border-gray-300 px-4 py-2">£245.00</td>
                   <td className="border border-gray-300 px-4 py-2">
-                    <button>Download</button>
+                    <button className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-black font-bold text-white">
+                      <LuDownload size={20} /> Download
+                    </button>
                   </td>
                 </tr>
               ))}
