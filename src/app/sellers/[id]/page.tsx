@@ -1,4 +1,4 @@
-import PhotoProductCard from '@/app/(photos)/components/PhotoProductCard';
+import PhotoProductCard from '@/app/(home)/components/PhotoProductCard';
 import { photos } from '@/app/data/photos';
 import Image from 'next/image';
 
