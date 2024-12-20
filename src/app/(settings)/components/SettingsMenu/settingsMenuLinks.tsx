@@ -1,11 +1,8 @@
 import {
-  LuCreditCard,
   LuKey,
-  LuLink,
   LuLogOut,
   LuMail,
   LuMailCheck,
-  LuShieldCheck,
   LuUser,
   LuUserX,
 } from 'react-icons/lu';
@@ -30,21 +27,6 @@ export const settingsMenuLinks = [
     href: '/change-password',
     icon: <LuKey size={20} />,
     label: 'Change Password',
-  },
-  {
-    href: '/setup-mfa',
-    icon: <LuShieldCheck size={20} />,
-    label: 'Set Up MFA',
-  },
-  {
-    href: '/connected-accounts',
-    icon: <LuLink size={20} />,
-    label: 'Connected Accounts',
-  },
-  {
-    href: '/manage-payment-methods',
-    icon: <LuCreditCard size={20} />,
-    label: 'Payment Methods',
   },
   {
     href: '/close-account',
