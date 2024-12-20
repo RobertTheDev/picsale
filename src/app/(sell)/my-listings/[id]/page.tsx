@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import UpdateListingForm from './components/UpdateListingForm';
 
 export const metadata: Metadata = {
   title: 'Edit Photo',
@@ -14,7 +13,6 @@ export default function EditPhotoPage({ params }: { params: { id: string } }) {
           <button className="bg-red-600 text-white">Delete Photo</button>
         </div>
       </div>
-      <UpdateListingForm />
     </main>
   );
 }
