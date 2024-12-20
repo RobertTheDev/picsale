@@ -29,10 +29,10 @@ export default function HeaderProfileMenu() {
             <div className="mt-4">
               <ul className="flex flex-col gap-4">
                 <li>
-                  <Link className="flex items-center" href="/orders">
+                  <Link className="flex items-center" href="/purchases">
                     <div className="flex items-center gap-2">
                       <LuHistory size={20} />
-                      <p>Orders</p>
+                      <p>Purchases</p>
                     </div>
                   </Link>
                 </li>
