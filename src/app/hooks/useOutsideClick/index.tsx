@@ -1,31 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 
 export function useOutsideClick() {
-  const [targetActive, setTargetActive] = useState(false);
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const toggleRef = useRef<HTMLButtonElement | null>(null);
+  const [isActive, setIsActive] = useState(false);
+  const targetRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        targetRef.current &&
-        !targetRef.current.contains(event.target as Node) &&
-        toggleRef.current &&
-        !toggleRef.current.contains(event.target as Node)
+        !targetRef.current?.contains(event.target as Node) &&
+        !toggleRef.current?.contains(event.target as Node)
       ) {
-        setTargetActive(false);
+        setIsActive(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  function toggleTarget() {
-    setTargetActive((prev) => !prev);
-  }
+  const toggleActive = () => setIsActive((prev) => !prev);
 
-  return { targetActive, targetRef, toggleTarget, toggleRef };
+  return { isActive, targetRef, toggleActive, toggleRef };
 }
