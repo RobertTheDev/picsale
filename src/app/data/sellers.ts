@@ -1,4 +1,6 @@
-export const sellers = [
+import ISeller from '../interfaces/Seller';
+
+export const sellers: ISeller[] = [
   {
     id: '1',
     firstName: 'Jane',
@@ -17,6 +19,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
       {
@@ -31,6 +34,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
       {
@@ -45,6 +49,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
       {
@@ -59,6 +64,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
     ],
@@ -81,6 +87,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
       {
@@ -95,6 +102,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
       {
@@ -109,6 +117,7 @@ export const sellers = [
           firstName: 'Jane',
           lastName: 'Moses',
           imageUrl: '/woman.jpg',
+          photos: [],
         },
       },
     ],
