@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PurchasesPage() {
   return (
-    <main className="flex flex-col px-8">
+    <main className="flex flex-col px-8 pb-8">
       <h1 className="mt-8 text-3xl font-bold">Purchases</h1>
       <div className="mt-8 flex w-full flex-col">
         <div className="overflow-x-auto">
