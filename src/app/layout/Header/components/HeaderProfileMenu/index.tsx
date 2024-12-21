@@ -3,21 +3,21 @@
 import { useOutsideClick } from '@/app/hooks/useOutsideClick';
 import Image from 'next/image';
 import Link from 'next/link';
-import { LuCog, LuHeart, LuHistory, LuImages, LuUser } from 'react-icons/lu';
+import { LuUser } from 'react-icons/lu';
+import profileMenuLinks from './profileMenuLinks';
 
 export default function HeaderProfileMenu() {
-  const { targetActive, toggleTarget, toggleRef, targetRef } =
-    useOutsideClick();
+  const { isActive, toggleActive, toggleRef, targetRef } = useOutsideClick();
 
   return (
     <div className="relative">
-      <button ref={toggleRef} onClick={toggleTarget}>
-        <LuUser size={24} />
+      <button ref={toggleRef} onClick={toggleActive}>
+        <LuUser size={28} />
       </button>
-      {targetActive && (
+      {isActive && (
         <div
           ref={targetRef}
-          className="absolute right-0 top-20 flex w-64 flex-col items-center rounded-lg bg-white p-8 shadow-md"
+          className="absolute right-0 top-12 flex w-80 flex-col items-center rounded-lg bg-white p-8 shadow-md"
         >
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center">
@@ -26,43 +26,23 @@ export default function HeaderProfileMenu() {
               </div>
               <p className="mt-2">Robert</p>
             </div>
-            <div className="mt-4">
-              <ul className="flex flex-col gap-4">
-                <li>
-                  <Link className="flex items-center" href="/purchases">
-                    <div className="flex items-center gap-2">
-                      <LuHistory size={20} />
-                      <p>Purchases</p>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="flex items-center" href="/edit-profile">
-                    <div className="flex items-center gap-2">
-                      <LuCog size={20} />
-                      <p>Account Settings</p>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="flex items-center" href="/wishlist">
-                    <div className="flex items-center gap-2">
-                      <LuHeart size={20} />
-                      <p>Wishlist</p>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link className="flex items-center" href="/my-listings">
-                    <div className="flex items-center gap-2">
-                      <LuImages size={20} />
-                      <p>My Listings</p>
-                    </div>
-                  </Link>
-                </li>
+            <div className="mt-8">
+              <ul className="flex flex-col gap-8">
+                {profileMenuLinks.map((link) => {
+                  return (
+                    <li key={link.href}>
+                      <Link className="flex items-center" href={link.href}>
+                        <div className="flex items-center gap-4">
+                          {link.icon}
+                          <p>{link.name}</p>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
-            <div className="mt-4">
+            <div className="mt-8">
               <p className="underline">Sign Out</p>
             </div>
           </div>
