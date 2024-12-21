@@ -1,4 +1,6 @@
-export const photos = [
+import type IPhoto from '../interfaces/Photo';
+
+export const photos: IPhoto[] = [
   {
     id: '1',
     url: '1.jpg',
@@ -11,6 +13,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -25,6 +28,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -39,6 +43,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -53,6 +58,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -67,6 +73,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -81,6 +88,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -95,6 +103,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -109,6 +118,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -123,6 +133,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -137,6 +148,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -151,6 +163,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -165,6 +178,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -179,6 +193,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -193,6 +208,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -207,6 +223,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -221,6 +238,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -235,6 +253,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -249,6 +268,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -263,6 +283,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -277,6 +298,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -291,6 +313,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -305,6 +328,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -319,6 +343,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -333,6 +358,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -347,6 +373,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -361,6 +388,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -375,6 +403,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -389,6 +418,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -403,6 +433,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -417,6 +448,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -431,6 +463,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -445,6 +478,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
   {
@@ -459,6 +493,7 @@ export const photos = [
       firstName: 'Jane',
       lastName: 'Moses',
       imageUrl: '/woman.jpg',
+      photos: [],
     },
   },
 ];
