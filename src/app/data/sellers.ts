@@ -1,4 +1,4 @@
-import ISeller from '../interfaces/Seller';
+import type ISeller from '../interfaces/Seller';
 
 export const sellers: ISeller[] = [
   {
