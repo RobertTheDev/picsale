@@ -20,7 +20,9 @@ export default async function EditPhotoPage({
       <div className="flex items-center justify-between">
         <h1>Photo {id}</h1>
         <div>
-          <button className="bg-red-600 text-white">Delete Photo</button>
+          <button type="button" className="bg-red-600 text-white">
+            Delete Photo
+          </button>
         </div>
       </div>
     </main>

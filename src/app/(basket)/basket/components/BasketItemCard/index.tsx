@@ -18,7 +18,7 @@ export default function BasketItemCard({ basketItem }: { basketItem: IPhoto }) {
         <p className="text-base font-medium">£215.00</p>
       </div>
       <div>
-        <button>
+        <button type="button">
           <LuTrash2 />
         </button>
       </div>

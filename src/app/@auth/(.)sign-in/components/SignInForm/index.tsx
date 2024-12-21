@@ -34,6 +34,7 @@ export default function SignInForm({
               Password
             </label>
             <button
+              type="button"
               onClick={() => handleForm('forgotPassword')}
               className="text-sm"
             >

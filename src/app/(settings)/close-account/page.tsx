@@ -16,7 +16,10 @@ export default function CloseAccountPage() {
         </p>
 
         <div className="mt-4 flex flex-1 flex-col">
-          <button className="w-full rounded-md bg-red-500 p-3 text-base font-bold text-white">
+          <button
+            type="submit"
+            className="w-full rounded-md bg-red-500 p-3 text-base font-bold text-white"
+          >
             Close Account
           </button>
         </div>

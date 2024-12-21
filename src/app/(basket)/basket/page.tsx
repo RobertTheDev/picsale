@@ -29,10 +29,16 @@ export default function BasketPage() {
               </div>
             </div>
             <div className="mt-4 flex w-full items-center gap-4">
-              <button className="h-12 w-40 overflow-hidden rounded-md bg-black font-medium text-white">
+              <button
+                type="button"
+                className="h-12 w-40 overflow-hidden rounded-md bg-black font-medium text-white"
+              >
                 View Basket
               </button>
-              <button className="h-12 w-40 overflow-hidden rounded-md bg-green-500 font-medium text-white">
+              <button
+                type="button"
+                className="h-12 w-40 overflow-hidden rounded-md bg-green-500 font-medium text-white"
+              >
                 Checkout
               </button>
             </div>

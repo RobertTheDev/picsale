@@ -34,6 +34,7 @@ export default function Page() {
     <div className="fixed left-0 top-0 z-[66] flex min-h-screen min-w-full items-center justify-center bg-[rgba(0,0,0,0.5)]">
       <div className="h-3/4 w-3/4 bg-white p-8">
         <button
+          type="button"
           className="flex size-8 items-center justify-center rounded-full bg-gray-200"
           onClick={() => {
             router.back();

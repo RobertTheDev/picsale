@@ -32,7 +32,10 @@ export default function ChangeEmailPage() {
         </div>
 
         <div className="mt-4 flex flex-1 flex-col">
-          <button className="w-full rounded-md bg-blue-500 p-3 text-base font-bold text-white">
+          <button
+            type="submit"
+            className="w-full rounded-md bg-blue-500 p-3 text-base font-bold text-white"
+          >
             Verify Email
           </button>
         </div>

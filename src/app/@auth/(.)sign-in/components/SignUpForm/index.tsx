@@ -62,6 +62,7 @@ export default function SignUpForm({
       </form>
 
       <button
+        type="button"
         onClick={() => handleForm('signIn')}
         className="mt-10 text-center text-sm/6 text-gray-500"
       >

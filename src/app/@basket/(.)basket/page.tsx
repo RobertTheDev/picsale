@@ -29,6 +29,7 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold">Your Basket</h1>
           <button
+            type="button"
             className="flex size-8 items-center justify-center rounded-full bg-gray-200"
             onClick={() => {
               router.back();
@@ -54,7 +55,7 @@ export default function Page() {
                   <p className="text-base font-medium">£215.00</p>
                 </div>
                 <div>
-                  <button>
+                  <button type="button">
                     <LuTrash2 />
                   </button>
                 </div>
@@ -73,10 +74,16 @@ export default function Page() {
               </div>
             </div>
             <div className="mt-4 flex w-full items-center gap-4">
-              <button className="h-12 w-40 overflow-hidden rounded-md bg-black font-medium text-white">
+              <button
+                type="button"
+                className="h-12 w-40 overflow-hidden rounded-md bg-black font-medium text-white"
+              >
                 View Basket
               </button>
-              <button className="h-12 w-40 overflow-hidden rounded-md bg-green-500 font-medium text-white">
+              <button
+                type="button"
+                className="h-12 w-40 overflow-hidden rounded-md bg-green-500 font-medium text-white"
+              >
                 Checkout
               </button>
             </div>

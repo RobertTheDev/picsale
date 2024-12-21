@@ -44,10 +44,16 @@ export default async function Page({
           </div>
 
           <div className="mt-8 flex items-center gap-4">
-            <button className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white">
+            <button
+              type="button"
+              className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white"
+            >
               <LuHeart size={20} /> Save to wishlist
             </button>
-            <button className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white">
+            <button
+              type="button"
+              className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white"
+            >
               <LuShoppingBasket size={20} /> Add to basket
             </button>
           </div>
