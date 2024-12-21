@@ -1,18 +1,15 @@
+import { ReactNode } from 'react';
 import SettingsMenu from './components/SettingsMenu';
 
-export default function Layout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex w-full flex-col items-center">
-      <div className="flex min-h-full w-full">
-        <div className="h-full bg-gray-50">
-          <SettingsMenu />
-        </div>
-        <div className="min-h-full flex-1 flex-col bg-white">{children}</div>
+    <main className="flex w-full">
+      <aside className="fixed top-0 hidden h-screen pt-16 md:flex md:w-80 2xl:w-80">
+        <SettingsMenu />
+      </aside>
+      <div className="flex w-full flex-1 flex-col md:ml-80 2xl:ml-96">
+        {children}
       </div>
-    </div>
+    </main>
   );
 }
