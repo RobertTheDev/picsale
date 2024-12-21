@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/sellers',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/settings',
         destination: '/edit-profile',
         permanent: true,
