@@ -2,7 +2,7 @@ export const photos = [
   {
     id: '1',
     url: '1.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -16,7 +16,7 @@ export const photos = [
   {
     id: '2',
     url: '2.jpg',
-    category: 'home',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -30,7 +30,7 @@ export const photos = [
   {
     id: '3',
     url: '3.jpg',
-    category: 'home',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -44,7 +44,7 @@ export const photos = [
   {
     id: '4',
     url: '4.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -58,7 +58,7 @@ export const photos = [
   {
     id: '5',
     url: '5.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -72,7 +72,7 @@ export const photos = [
   {
     id: '6',
     url: '6.jpg',
-    category: 'wildlife',
+    category: 'food-drink',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -86,7 +86,7 @@ export const photos = [
   {
     id: '7',
     url: '7.jpg',
-    category: 'wildlife',
+    category: 'food-drink',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -100,7 +100,7 @@ export const photos = [
   {
     id: '8',
     url: '8.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -114,7 +114,7 @@ export const photos = [
   {
     id: '9',
     url: '9.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -128,7 +128,7 @@ export const photos = [
   {
     id: '10',
     url: '10.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -142,7 +142,7 @@ export const photos = [
   {
     id: '11',
     url: '11.jpg',
-    category: 'wildlife',
+    category: 'food-drink',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -156,7 +156,7 @@ export const photos = [
   {
     id: '12',
     url: '12.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -170,7 +170,7 @@ export const photos = [
   {
     id: '13',
     url: '13.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -184,7 +184,7 @@ export const photos = [
   {
     id: '14',
     url: '14.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -198,7 +198,7 @@ export const photos = [
   {
     id: '15',
     url: '15.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -212,7 +212,7 @@ export const photos = [
   {
     id: '16',
     url: '16.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -226,7 +226,7 @@ export const photos = [
   {
     id: '17',
     url: '17.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -240,7 +240,7 @@ export const photos = [
   {
     id: '18',
     url: '18.jpg',
-    category: 'wildlife',
+    category: 'travel-landmarks',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -254,7 +254,7 @@ export const photos = [
   {
     id: '19',
     url: '19.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -268,7 +268,7 @@ export const photos = [
   {
     id: '20',
     url: '20.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -282,7 +282,7 @@ export const photos = [
   {
     id: '21',
     url: '21.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -296,7 +296,7 @@ export const photos = [
   {
     id: '22',
     url: '22.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -310,7 +310,7 @@ export const photos = [
   {
     id: '23',
     url: '23.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -324,7 +324,7 @@ export const photos = [
   {
     id: '24',
     url: '24.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -338,7 +338,7 @@ export const photos = [
   {
     id: '25',
     url: '25.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -352,7 +352,7 @@ export const photos = [
   {
     id: '26',
     url: '26.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -366,7 +366,7 @@ export const photos = [
   {
     id: '27',
     url: '27.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -380,7 +380,7 @@ export const photos = [
   {
     id: '28',
     url: '28.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -394,7 +394,7 @@ export const photos = [
   {
     id: '29',
     url: '29.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -408,7 +408,7 @@ export const photos = [
   {
     id: '30',
     url: '30.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -422,7 +422,7 @@ export const photos = [
   {
     id: '31',
     url: '31.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -436,7 +436,7 @@ export const photos = [
   {
     id: '32',
     url: '32.jpg',
-    category: 'wildlife',
+    category: 'nature-wildlife',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
@@ -450,7 +450,7 @@ export const photos = [
   {
     id: '33',
     url: '33.jpg',
-    category: 'wildlife',
+    category: 'sports-recreation',
     title: 'Golf Course in Portugal',
     description: 'This is the description',
     price: { currency: 'GBP', amount: 1099 },
