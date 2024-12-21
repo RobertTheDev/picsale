@@ -1,7 +1,6 @@
+import PhotoProductCard from '@/app/(home)/components/PhotoProductCard';
 import { photos } from '@/app/data/photos';
 import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Wishlist',
@@ -9,25 +8,14 @@ export const metadata: Metadata = {
 
 export default function WishlistPage() {
   return (
-    <main className="px-8">
-      <h1 className="mt-8 text-3xl font-bold">Wishlist</h1>
+    <main className="flex flex-col px-8 pb-8">
+      <div className="mt-8">
+        <h1 className="text-3xl font-bold">Wishlist</h1>
+      </div>
       <div className="mt-8 flex w-full flex-col">
-        <ul className="grid w-full grid-cols-4 gap-8">
+        <ul className="grid w-full grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {photos.map((photo) => {
-            return (
-              <li className="w-full" key={photo.id}>
-                <Link href={`/photos/${photo.id}`}>
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      fill
-                      objectFit="cover"
-                      alt=""
-                      src={`/photos/${photo.url}`}
-                    />
-                  </div>
-                </Link>
-              </li>
-            );
+            return <PhotoProductCard key={photo.id} photo={photo} />;
           })}
         </ul>
       </div>
