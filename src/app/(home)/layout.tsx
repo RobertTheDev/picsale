@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import TabBar from '../layout/TabBar';
 import MobileSearchHeader from './components/MobileSearchHeader';
 import PhotoFilterMenu from './components/PhotoFilterMenu';
 
@@ -13,6 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <main className="flex w-full flex-col md:ml-80 2xl:ml-96">
           {children}
         </main>
+        <TabBar />
       </div>
     </div>
   );

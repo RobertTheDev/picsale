@@ -1,4 +1,5 @@
 import { photos } from '@/app/data/photos';
+import TabBar from '@/app/layout/TabBar';
 import { Metadata } from 'next';
 import BasketItemCard from './components/BasketItemCard';
 
@@ -19,6 +20,7 @@ export default function BasketPage() {
           })}
         </div>
       </div>
+      <TabBar />
     </main>
   );
 }

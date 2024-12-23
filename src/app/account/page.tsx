@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { LuLogOut } from 'react-icons/lu';
 import profileMenuLinks from '../layout/Header/components/HeaderProfileMenu/profileMenuLinks';
+import TabBar from '../layout/TabBar';
 
 export default function AccountPage() {
   return (
@@ -44,6 +45,7 @@ export default function AccountPage() {
           </ul>
         </div>
       </div>
+      <TabBar />
     </main>
   );
 }
