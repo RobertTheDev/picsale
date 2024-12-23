@@ -1,0 +1,55 @@
+'use client';
+
+import SettingsFormEmailInput from '@/app/(settings)/components/SettingsFormEmailInput';
+import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import SettingsFormSuccessMessage from '../../components/SettingsFormSuccessMessage';
+import { verifyEmailSchema, VerifyEmailSchemaType } from './schema';
+
+export default function VerifyEmailForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<VerifyEmailSchemaType>({
+    resolver: zodResolver(verifyEmailSchema),
+  });
+
+  const onSubmit = (data: VerifyEmailSchemaType) => {
+    alert(JSON.stringify(data));
+  };
+
+  const formSuccess = false;
+
+  return (
+    <div>
+      {formSuccess ? (
+        <SettingsFormSuccessMessage messageText="Email successfully verified" />
+      ) : (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex h-auto flex-col p-12"
+        >
+          <div>
+            <h3 className="text-3xl font-bold">Verify Email</h3>
+          </div>
+          <div className="flex flex-col">
+            <div className="mt-8">
+              <SettingsFormEmailInput
+                register={register}
+                error={errors.email}
+              />
+            </div>
+            <div className="mt-8 flex flex-1 flex-col">
+              <SettingsFormSubmitButton
+                labelText="Verify Email"
+                loading={false}
+              />
+            </div>
+          </div>
+        </form>
+      )}
+    </div>
+  );
+}
