@@ -2,7 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
-import { useForm } from 'react-hook-form';
+import { useForm, UseFormRegister } from 'react-hook-form';
 import { z } from 'zod';
 
 const signInSchema = z.object({
@@ -11,6 +11,42 @@ const signInSchema = z.object({
 });
 
 type SignInFormValues = z.infer<typeof signInSchema>;
+
+type EmailInputProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  register: UseFormRegister<any>;
+  name: string;
+  error?: string;
+};
+
+function EmailInput({ register, name, error }: EmailInputProps) {
+  return (
+    <div className="mt-8 flex w-full flex-col">
+      <div className="flex w-full flex-col">
+        <div>
+          <label htmlFor={name} className="text-sm font-semibold text-white">
+            Email address
+          </label>
+        </div>
+        <div className="mt-3">
+          <input
+            id={name}
+            type="email"
+            {...register(name)}
+            autoComplete="email"
+            placeholder="name@placeholder.com"
+            className={`w-full rounded-md border-2 ${error ? 'border-red-500' : 'border-neutral-500'} bg-neutral-950 p-3 outline-none hover:border-neutral-400 focus:border-neutral-200`}
+          />
+        </div>
+        {error && (
+          <div className="mt-3">
+            <p className="text-sm font-medium text-red-500">{error}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function SignInForm() {
   const {
@@ -34,25 +70,11 @@ export default function SignInForm() {
         <h1 className="mb-4 text-xl font-semibold text-gray-800">Sign In</h1>
 
         {/* Email Field */}
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            {...register('email')}
-            className={`mt-1 block w-full rounded-md border px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm ${
-              errors.email ? 'border-red-500' : 'border-gray-300'
-            }`}
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-          )}
-        </div>
+        <EmailInput
+          register={register}
+          name="email"
+          error={errors.email?.message}
+        />
 
         {/* Password Field */}
         <div className="mb-4">
