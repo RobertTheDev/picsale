@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import ContextProvider from './contexts/ContextProvider';
 import './globals.css';
 import Header from './layout/Header';
 import ProgressBar from './layout/ProgressBar';
@@ -25,12 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  auth,
   basket,
   children,
   photos,
 }: Readonly<{
-  auth: React.ReactNode;
   basket: React.ReactNode;
   children: React.ReactNode;
   photos: React.ReactNode;
@@ -40,14 +39,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} bg-black ${geistMono.variable} antialiased`}
       >
-        <div className="flex min-h-screen min-w-full flex-col bg-black text-white dark:bg-black">
-          <Header />
-          <ProgressBar />
-          <div>{auth}</div>
-          <div>{basket}</div>
-          <div>{photos}</div>
-          <div className="flex min-w-full flex-1 flex-col">{children}</div>
-        </div>
+        <ContextProvider>
+          <div className="flex min-h-screen min-w-full flex-col bg-black text-white dark:bg-black">
+            <Header />
+            <ProgressBar />
+
+            <div>{basket}</div>
+            <div>{photos}</div>
+            <div className="flex min-w-full flex-1 flex-col">{children}</div>
+          </div>
+        </ContextProvider>
       </body>
     </html>
   );
