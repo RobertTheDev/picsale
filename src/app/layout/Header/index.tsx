@@ -40,10 +40,10 @@ export default function Header() {
             </Link>
           </div>
           <HeaderProfileMenu />
-          <div className="hidden">
+          <div>
             <Link
               href="/sign-in"
-              className="flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-medium text-white"
+              className="flex items-center justify-center rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white"
             >
               Sign In
             </Link>
