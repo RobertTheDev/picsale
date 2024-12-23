@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { LuSearch } from 'react-icons/lu';
 
 export default function MobileSearchHeader() {
@@ -13,7 +14,9 @@ export default function MobileSearchHeader() {
         </div>
       </div>
       <div>
-        <LuSearch size={28} />
+        <Link href="/categories">
+          <LuSearch size={28} />
+        </Link>
       </div>
     </div>
   );
