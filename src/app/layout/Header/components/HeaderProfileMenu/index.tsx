@@ -1,9 +1,8 @@
 'use client';
 
 import { useOutsideClick } from '@/app/hooks/useOutsideClick';
-import Image from 'next/image';
 import Link from 'next/link';
-import { LuUser } from 'react-icons/lu';
+import { LuLogOut, LuUser } from 'react-icons/lu';
 import profileMenuLinks from './profileMenuLinks';
 
 export default function HeaderProfileMenu() {
@@ -17,22 +16,19 @@ export default function HeaderProfileMenu() {
       {isActive && (
         <div
           ref={targetRef}
-          className="absolute right-0 top-12 flex w-80 flex-col items-center rounded-lg bg-white p-8 shadow-md"
+          className="absolute right-0 top-12 flex flex-col items-center rounded-lg bg-neutral-900 p-3 shadow-md"
         >
           <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center">
-              <div className="relative h-16 w-16 overflow-hidden rounded-full">
-                <Image fill alt="" src="/avatar.jpg" />
-              </div>
-              <p className="mt-2">Robert</p>
-            </div>
-            <div className="mt-8">
-              <ul className="flex flex-col gap-8">
+            <div>
+              <ul className="flex flex-col items-center gap-2">
                 {profileMenuLinks.map((link) => {
                   return (
                     <li key={link.href}>
-                      <Link className="flex items-center" href={link.href}>
-                        <div className="flex items-center gap-4">
+                      <Link
+                        className="flex h-12 w-56 items-center rounded-lg px-4 hover:bg-gray-800"
+                        href={link.href}
+                      >
+                        <div className="flex items-center gap-5">
                           {link.icon}
                           <p>{link.name}</p>
                         </div>
@@ -40,10 +36,18 @@ export default function HeaderProfileMenu() {
                     </li>
                   );
                 })}
+                <li>
+                  <button
+                    type="button"
+                    className="flex h-12 w-56 items-center px-4 hover:bg-gray-800"
+                  >
+                    <div className="flex items-center gap-5">
+                      <LuLogOut size={20} />
+                      <p>Sign Out</p>
+                    </div>
+                  </button>
+                </li>
               </ul>
-            </div>
-            <div className="mt-8">
-              <p className="underline">Sign Out</p>
             </div>
           </div>
         </div>
