@@ -1,5 +1,6 @@
 import { photos } from '@/app/data/photos';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { LuRefreshCcw } from 'react-icons/lu';
 import PhotoProductCard from './components/PhotoProductCard';
 
@@ -21,7 +22,16 @@ export default async function PhotoProductsList() {
   return (
     <ul className="mt-2 grid w-full grid-cols-2 gap-2 px-2 py-2 md:grid-cols-3 lg:grid-cols-4">
       {photos.map((photo) => {
-        return <PhotoProductCard key={photo.id} photo={photo} />;
+        return (
+          <Suspense
+            key={photo.id}
+            fallback={
+              <div className="aspect-square w-full animate-pulse bg-gray-300" />
+            }
+          >
+            <PhotoProductCard photo={photo} />
+          </Suspense>
+        );
       })}
     </ul>
   );
