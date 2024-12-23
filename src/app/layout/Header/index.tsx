@@ -7,7 +7,7 @@ import HeaderProfileMenu from './components/HeaderProfileMenu';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-16 w-full items-center bg-[rgba(0,0,0,0.85)] shadow-md">
+    <header className="fixed top-0 z-50 flex h-16 w-full items-center bg-[rgba(0,0,0,0.85)] shadow-md">
       <div className="flex w-full items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-8">
           <Link href="/">
