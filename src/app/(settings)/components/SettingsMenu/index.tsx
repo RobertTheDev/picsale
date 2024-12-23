@@ -8,7 +8,7 @@ export default function SettingsMenu() {
         <Link
           key={href}
           href={href}
-          className="flex items-center gap-5 rounded-lg px-5 py-3 hover:bg-gray-300"
+          className="flex items-center gap-5 rounded-lg px-5 py-3 hover:bg-neutral-800"
         >
           {icon}
           <p className="text-base font-medium">{label}</p>
