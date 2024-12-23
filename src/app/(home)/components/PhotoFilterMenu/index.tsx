@@ -104,7 +104,7 @@ export default function PhotoFilterMenu() {
             <Link
               href={`/categories/${category.slug}`}
               key={category.slug}
-              className="flex h-12 w-full items-center gap-4 overflow-hidden rounded-lg px-4 py-4 text-base hover:bg-gray-300"
+              className="flex h-12 w-full items-center gap-4 overflow-hidden rounded-lg px-4 py-4 text-base hover:bg-gray-800"
             >
               <div className="relative">{category.icon}</div>
               <p className="text-base font-medium">{category.title}</p>
