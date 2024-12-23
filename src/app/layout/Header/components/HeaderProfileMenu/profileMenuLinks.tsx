@@ -7,11 +7,6 @@ const profileMenuLinks = [
     name: 'Purchases',
   },
   {
-    href: '/edit-profile',
-    icon: <LuCog size={20} />,
-    name: 'Account Settings',
-  },
-  {
     href: '/wishlist',
     icon: <LuHeart size={20} />,
     name: 'Wishlist',
@@ -20,6 +15,11 @@ const profileMenuLinks = [
     href: '/my-listings',
     icon: <LuImages size={20} />,
     name: 'My Listings',
+  },
+  {
+    href: '/edit-profile',
+    icon: <LuCog size={20} />,
+    name: 'Account Settings',
   },
 ];
 
