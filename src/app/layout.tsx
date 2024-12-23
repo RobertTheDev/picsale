@@ -5,6 +5,7 @@ import ContextProvider from './contexts/ContextProvider';
 import './globals.css';
 import Header from './layout/Header';
 import ProgressBar from './layout/ProgressBar';
+import TabBar from './layout/TabBar';
 import company from './lib/company';
 
 const geistSans = Geist({
@@ -47,9 +48,10 @@ export default function RootLayout({
             <ProgressBar />
             <div>{basket}</div>
             <div>{photos}</div>
-            <div className="flex min-w-full flex-1 flex-col pt-16">
+            <div className="flex min-w-full flex-1 flex-col pb-16 pt-0 md:pb-0 md:pt-16">
               {children}
             </div>
+            <TabBar />
           </div>
         </ContextProvider>
       </body>
