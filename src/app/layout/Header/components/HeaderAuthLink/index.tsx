@@ -10,7 +10,7 @@ export default function HeaderAuthLink() {
     <button
       onClick={() => setAuthModal({ active: true, formType: 'signIn' })}
       type="button"
-      className="flex h-12 w-32 items-center justify-center rounded-full bg-neutral-600 text-base font-medium text-white"
+      className="flex h-12 w-32 items-center justify-center rounded-full bg-neutral-800 text-base font-medium text-white hover:bg-neutral-900"
     >
       Log In
     </button>
