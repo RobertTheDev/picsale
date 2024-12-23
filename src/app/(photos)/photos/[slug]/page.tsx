@@ -53,6 +53,7 @@ export default async function PhotoPage({
           src={`/photos/${photo.url}`}
         />
       </div>
+
       <div className="flex w-full flex-col px-8 pb-8 lg:w-1/2">
         <div className="mt-2">
           <h2 className="text-4xl font-bold">{photo.title}</h2>
@@ -77,7 +78,9 @@ export default async function PhotoPage({
                 <Image
                   className="object-cover"
                   fill
-                  src={photo!.seller.imageUrl}
+                  src={
+                    photo.seller.imageUrl ? photo.seller.imageUrl : '/woman.jpg'
+                  }
                   alt=""
                 />
               </div>
