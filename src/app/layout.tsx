@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import AuthModal from './(auth)/components/AuthModal';
 import ContextProvider from './contexts/ContextProvider';
 import './globals.css';
 import Header from './layout/Header';
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         <ContextProvider>
           <div className="flex min-h-screen min-w-full flex-col bg-black text-white dark:bg-black">
+            <AuthModal />
             <Header />
             <ProgressBar />
 
