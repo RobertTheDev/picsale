@@ -38,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} bg-black ${geistMono.variable} antialiased`}
       >
-        <div className="flex min-h-screen min-w-full flex-col">
+        <div className="flex min-h-screen min-w-full flex-col bg-black text-white dark:bg-black">
           <Header />
           <ProgressBar />
           <div>{auth}</div>
