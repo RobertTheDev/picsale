@@ -9,7 +9,7 @@ export default function BackButton() {
   return (
     <button
       type="button"
-      className="flex size-10 items-center justify-center rounded-full bg-gray-200"
+      className="flex size-10 items-center justify-center rounded-full bg-neutral-800"
       onClick={() => {
         router.back();
       }}
