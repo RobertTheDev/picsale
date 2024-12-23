@@ -17,7 +17,7 @@ const profileMenuLinks = [
     name: 'My Listings',
   },
   {
-    href: '/edit-profile',
+    href: '/account-settings',
     icon: <LuCog size={20} />,
     name: 'Account Settings',
   },
