@@ -13,27 +13,27 @@ export default function PurchasesPage() {
       <h1 className="mt-8 text-3xl font-bold">Purchases</h1>
       <div className="mt-8 flex w-full flex-col">
         <div className="overflow-x-auto">
-          <table className="min-w-full border-collapse border border-gray-200">
-            <thead className="bg-gray-100">
+          <table className="min-w-full border-collapse border border-gray-700">
+            <thead className="bg-neutral-900">
               <tr>
-                <th className="border border-gray-300 px-4 py-2 text-left">
+                <th className="border border-neutral-950 px-4 py-2 text-left">
                   Product
                 </th>
-                <th className="border border-gray-300 px-4 py-2 text-left">
+                <th className="border border-neutral-950 px-4 py-2 text-left">
                   Purchase Date
                 </th>
-                <th className="border border-gray-300 px-4 py-2 text-left">
+                <th className="border border-neutral-950 px-4 py-2 text-left">
                   Price
                 </th>
-                <th className="border border-gray-300 px-4 py-2 text-left">
+                <th className="border border-neutral-950 px-4 py-2 text-left">
                   Download Photo
                 </th>
               </tr>
             </thead>
             <tbody>
               {photos.map((photo) => (
-                <tr key={photo.id} className="hover:bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2">
+                <tr key={photo.id} className="hover:bg-neutral-950">
+                  <td className="border border-neutral-900 px-4 py-2">
                     <div className="flex items-center gap-4">
                       <div className="relative size-20 overflow-hidden rounded-lg">
                         <Image
@@ -46,12 +46,14 @@ export default function PurchasesPage() {
                       Image of a gorilla lying down
                     </div>
                   </td>
-                  <td className="border border-gray-300 px-4 py-2">
+                  <td className="border border-neutral-900 px-4 py-2">
                     21 October 2024
                   </td>
-                  <td className="border border-gray-300 px-4 py-2">£245.00</td>
-                  <td className="border border-gray-300 px-4 py-2">
-                    <button className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-black font-bold text-white">
+                  <td className="border border-neutral-900 px-4 py-2">
+                    £245.00
+                  </td>
+                  <td className="border border-neutral-900 px-4 py-2">
+                    <button className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-neutral-700 font-bold text-white">
                       <LuDownload size={20} /> Download
                     </button>
                   </td>
