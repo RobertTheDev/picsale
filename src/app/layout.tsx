@@ -45,10 +45,11 @@ export default function RootLayout({
             <AuthModal />
             <Header />
             <ProgressBar />
-
             <div>{basket}</div>
             <div>{photos}</div>
-            <div className="flex min-w-full flex-1 flex-col">{children}</div>
+            <div className="flex min-w-full flex-1 flex-col pt-16">
+              {children}
+            </div>
           </div>
         </ContextProvider>
       </body>
