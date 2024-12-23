@@ -1,11 +1,4 @@
-import {
-  LuKey,
-  LuLogOut,
-  LuMail,
-  LuMailCheck,
-  LuUser,
-  LuUserX,
-} from 'react-icons/lu';
+import { LuKey, LuMail, LuMailCheck, LuUser, LuUserX } from 'react-icons/lu';
 
 export const settingsMenuLinks = [
   {
@@ -33,5 +26,4 @@ export const settingsMenuLinks = [
     icon: <LuUserX size={20} />,
     label: 'Close Account',
   },
-  { href: '/logout', icon: <LuLogOut size={20} />, label: 'Log Out' },
 ];
