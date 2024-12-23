@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function BasketPage() {
   return (
     <main className="flex w-full flex-col items-center">
-      <div className="w-full bg-white px-8 py-8">
+      <div className="w-full bg-neutral-900 px-8 py-8">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold">Your Basket</h1>
         </div>

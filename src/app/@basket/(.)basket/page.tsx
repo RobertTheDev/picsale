@@ -25,12 +25,12 @@ export default function Page() {
 
   return (
     <div className="fixed left-0 top-0 z-[66] flex min-h-screen min-w-full items-center justify-center bg-[rgba(0,0,0,0.5)]">
-      <div className="fixed bottom-[8px] right-[8px] top-[8px] max-h-screen w-96 overflow-hidden overflow-x-scroll overflow-y-scroll rounded-lg bg-white px-8 py-8">
+      <div className="fixed bottom-[8px] right-[8px] top-[8px] max-h-screen w-96 overflow-x-scroll overflow-y-scroll rounded-lg bg-neutral-900 px-8 py-8">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold">Your Basket</h1>
           <button
             type="button"
-            className="flex size-8 items-center justify-center rounded-full bg-gray-200"
+            className="flex size-8 items-center justify-center rounded-full bg-neutral-800"
             onClick={() => {
               router.back();
             }}
@@ -63,7 +63,7 @@ export default function Page() {
             );
           })}
         </div>
-        <div className="fixed bottom-0 bg-white py-4">
+        <div className="fixed bottom-0 bg-neutral-900 py-4">
           <div className="flex flex-col">
             <div className="flex h-12 items-center justify-between">
               <div>
