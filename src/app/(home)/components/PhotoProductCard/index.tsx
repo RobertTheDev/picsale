@@ -2,7 +2,7 @@ import IPhoto from '@/app/interfaces/Photo';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function PhotoProductCard({ photo }: { photo: IPhoto }) {
+export default async function PhotoProductCard({ photo }: { photo: IPhoto }) {
   return (
     <Link href={`/photos/${photo.id}`}>
       <li className="relative w-full">
@@ -13,6 +13,7 @@ export default function PhotoProductCard({ photo }: { photo: IPhoto }) {
             fill
             alt=""
             src={`/photos/${photo.url}`}
+            priority
           />
         </div>
       </li>
