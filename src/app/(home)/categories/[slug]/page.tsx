@@ -2,6 +2,7 @@ import PhotoProductCard from '@/app/(home)/components/PhotoProductCard';
 import { photos } from '@/app/data/photos';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { LuRefreshCcw } from 'react-icons/lu';
 
 export async function generateMetadata({
@@ -50,7 +51,16 @@ export default async function CategoryPage({
   return (
     <ul className="mt-2 grid w-full grid-cols-2 gap-2 px-2 py-2 md:grid-cols-3 lg:grid-cols-4">
       {filteredPhotos.map((photo) => {
-        return <PhotoProductCard key={photo.id} photo={photo} />;
+        return (
+          <Suspense
+            key={photo.id}
+            fallback={
+              <div className="aspect-square w-full animate-pulse bg-gray-300" />
+            }
+          >
+            <PhotoProductCard photo={photo} />
+          </Suspense>
+        );
       })}
     </ul>
   );
