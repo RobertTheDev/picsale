@@ -20,7 +20,7 @@ export default async function Page({
 
   return (
     <ModalOverlay>
-      <div className="flex h-full w-full flex-col overflow-hidden overflow-y-scroll rounded-xl bg-white md:h-full md:flex-row">
+      <div className="flex h-full w-full flex-col overflow-hidden overflow-y-scroll rounded-xl bg-black md:h-full md:flex-row">
         <div className="relative aspect-square w-full md:w-1/2">
           <Image
             fill
@@ -29,8 +29,9 @@ export default async function Page({
             src={`/photos/${photo?.url}`}
           />
         </div>
+
         <div className="flex w-full flex-col p-8 md:w-1/2">
-          <div className="flex w-full items-center justify-end bg-white">
+          <div className="flex w-full items-center justify-end">
             <BackButton />
           </div>
           <div className="mt-2">
@@ -46,13 +47,13 @@ export default async function Page({
           <div className="mt-8 flex items-center gap-4">
             <button
               type="button"
-              className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white"
+              className="flex items-center justify-center gap-4 rounded-lg bg-neutral-800 px-4 py-4 text-white"
             >
               <LuHeart size={20} /> Save to wishlist
             </button>
             <button
               type="button"
-              className="flex items-center justify-center gap-4 rounded-lg bg-black px-4 py-4 text-white"
+              className="flex items-center justify-center gap-4 rounded-lg bg-neutral-800 px-4 py-4 text-white"
             >
               <LuShoppingBasket size={20} /> Add to basket
             </button>
