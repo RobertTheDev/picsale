@@ -2,6 +2,7 @@ import company from '@/app/lib/company';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuShoppingBasket } from 'react-icons/lu';
+import HeaderAuthLink from './components/HeaderAuthLink';
 import HeaderProfileMenu from './components/HeaderProfileMenu';
 
 export default function Header() {
@@ -40,14 +41,7 @@ export default function Header() {
             </Link>
           </div>
           <HeaderProfileMenu />
-          <div>
-            <Link
-              href="/sign-in"
-              className="flex items-center justify-center rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white"
-            >
-              Sign In
-            </Link>
-          </div>
+          <HeaderAuthLink />
         </div>
       </div>
     </header>
