@@ -15,7 +15,7 @@ const tabLinks = [
     icon: <LuShoppingBasket size={28} />,
   },
   {
-    href: '/profile',
+    href: '/account',
     icon: <LuUser size={28} />,
   },
 ];
