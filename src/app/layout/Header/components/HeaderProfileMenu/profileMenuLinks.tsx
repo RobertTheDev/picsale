@@ -1,4 +1,4 @@
-import { LuCog, LuHeart, LuHistory, LuImages } from 'react-icons/lu';
+import { LuCog, LuHeart, LuHistory, LuImages, LuLogOut } from 'react-icons/lu';
 
 const profileMenuLinks = [
   {
@@ -20,6 +20,11 @@ const profileMenuLinks = [
     href: '/account-settings',
     icon: <LuCog size={20} />,
     name: 'Account Settings',
+  },
+  {
+    href: '/logouts',
+    icon: <LuLogOut size={20} />,
+    name: 'Logout',
   },
 ];
 
