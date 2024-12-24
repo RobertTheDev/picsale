@@ -22,7 +22,7 @@ const profileMenuLinks = [
     name: 'Account Settings',
   },
   {
-    href: '/logouts',
+    href: '/logout',
     icon: <LuLogOut size={20} />,
     name: 'Logout',
   },
