@@ -1,20 +1,18 @@
 'use client';
 
+import FormPasswordInput from '@/app/layout/Form/FormPasswordInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { LuEye, LuEyeOff } from 'react-icons/lu';
 import {
   ResetPasswordFormSchema,
   ResetPasswordFormSchemaType,
 } from './resetPassword.schema';
 
 export default function ResetPasswordForm() {
-  const searchParams = useSearchParams();
-  const token = searchParams.get('token');
-
-  const [passwordVisibility, setPasswordVisibility] = useState(false);
+  // const searchParams = useSearchParams();
+  // const token = searchParams.get('token');
 
   const {
     register,
@@ -25,63 +23,40 @@ export default function ResetPasswordForm() {
   });
 
   const onSubmit = (data: ResetPasswordFormSchemaType) => {
-    console.log(data);
+    alert(JSON.stringify(data));
   };
 
-  return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="mt-16 flex h-auto w-2/5 flex-col rounded-lg border-2 border-black bg-white p-8"
-    >
-      <h3 className="text-base font-bold">Reset Password {token}</h3>
-      <div className="mt-4 flex flex-1 flex-col">
-        <label
-          htmlFor="password"
-          className="text-sm font-semibold text-gray-900"
-        >
-          Password
-        </label>
-        <div className="mt-2">
-          <div className="flex items-center gap-2">
-            <input
-              id="password"
-              {...register('password')}
-              type={passwordVisibility ? 'text' : 'password'}
-              placeholder="Enter your password"
-              autoComplete="new-password"
-              className={`w-full rounded-md border-2 ${
-                errors.password ? 'border-red-600' : 'border-black'
-              } p-3 text-gray-900 outline-none focus:border-blue-600`}
-            />
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setPasswordVisibility(!passwordVisibility);
-              }}
-              className="h-full rounded-lg bg-gray-200 p-3"
-            >
-              {passwordVisibility ? (
-                <LuEyeOff size={20} />
-              ) : (
-                <LuEye size={20} />
-              )}
-            </button>
-          </div>
-          {errors.password && (
-            <div>
-              <p className="text-sm font-medium text-red-600">
-                {errors.password.message}
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
+  const formSuccess = false;
 
-      <div className="mt-4 flex flex-1 flex-col">
-        <button className="w-full rounded-md bg-blue-500 p-3 text-base font-bold text-white">
-          Reset Password
-        </button>
-      </div>
-    </form>
+  return (
+    <div className="w-full">
+      {formSuccess ? (
+        <FormSuccessMessage messageText="Password successfully reset. You can now login again." />
+      ) : (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-16 flex h-auto w-full flex-col px-8"
+        >
+          <div>
+            <h3 className="text-3xl font-bold">Reset Password</h3>
+          </div>
+          <div className="flex flex-col">
+            <div className="mt-8">
+              <FormPasswordInput
+                id="password"
+                label="Password"
+                placeholder="Enter your new password"
+                autoComplete="new-password"
+                register={register}
+                error={errors.password}
+              />
+            </div>
+            <div className="mt-8 flex flex-1 flex-col">
+              <FormSubmitButton labelText="Reset Password" loading={false} />
+            </div>
+          </div>
+        </form>
+      )}
+    </div>
   );
 }
