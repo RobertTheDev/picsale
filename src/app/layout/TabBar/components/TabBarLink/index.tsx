@@ -11,6 +11,8 @@ export default function TabBarLink({
 }) {
   const pathName = usePathname();
 
+  const basketTotal = 7;
+
   return (
     <Link className="flex flex-1" href={tabBarLink.href}>
       <div className="flex w-full flex-col items-center">
@@ -20,9 +22,9 @@ export default function TabBarLink({
           >
             {tabBarLink.icon}
           </div>
-          {tabBarLink.name === 'basket' && (
+          {tabBarLink.name === 'basket' && basketTotal > 0 && (
             <div className="absolute right-[-8px] top-[-6px] flex size-5 items-center justify-center rounded-full bg-blue-500">
-              <p className="text-sm font-medium text-white">9</p>
+              <p className="text-sm font-medium text-white">{basketTotal}</p>
             </div>
           )}
         </div>
