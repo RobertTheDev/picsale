@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import TabBar from '../layout/TabBar';
+import TabBar from '../../layout/TabBar';
 import MobileSearchHeader from './components/MobileSearchHeader';
 import PhotoFilterMenu from './components/PhotoFilterMenu';
 
