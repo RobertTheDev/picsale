@@ -15,7 +15,7 @@ export default function NotFound() {
       <div className="mt-16">
         <Link
           href="/"
-          className="flex items-center justify-center gap-4 rounded-full bg-black px-8 py-4 text-white shadow-md"
+          className="flex items-center justify-center gap-4 rounded-full bg-neutral-800 px-8 py-4 text-white shadow-md"
         >
           <LuHouse size={20} />
           Go Home
