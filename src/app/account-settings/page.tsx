@@ -1,32 +1,44 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { LuChevronRight } from 'react-icons/lu';
+import {
+  LuChevronRight,
+  LuLock,
+  LuMail,
+  LuMailCheck,
+  LuPencil,
+  LuTrash,
+} from 'react-icons/lu';
 
 const accountSettingsLinks = [
   {
     id: 1,
-    title: 'Edit Profile',
+    name: 'Edit Profile',
     slug: 'edit-profile',
+    icon: <LuPencil size={20} />,
   },
   {
     id: 2,
-    title: 'Change Email',
+    name: 'Change Email',
     slug: 'change-email',
+    icon: <LuMail size={20} />,
   },
   {
     id: 3,
-    title: 'Change Password',
+    name: 'Change Password',
     slug: 'change-password',
+    icon: <LuLock size={20} />,
   },
   {
     id: 4,
-    title: 'Verify Email',
+    name: 'Verify Email',
     slug: 'verify-email',
+    icon: <LuMailCheck size={20} />,
   },
   {
     id: 5,
-    title: 'Close Account',
+    name: 'Close Account',
     slug: 'close-account',
+    icon: <LuTrash size={20} />,
   },
 ];
 
@@ -48,7 +60,11 @@ export default function BasketPage() {
               key={link.id}
               href={`/${link.slug}`}
             >
-              <p className="text-center">{link.title}</p>
+              <div className="flex items-center gap-5">
+                {link.icon}
+                <p>{link.name}</p>
+              </div>
+
               <LuChevronRight size={28} />
             </Link>
           );
