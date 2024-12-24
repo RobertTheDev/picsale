@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuChevronRight } from 'react-icons/lu';
-import profileMenuLinks from '../layout/Header/components/HeaderProfileMenu/profileMenuLinks';
-import TabBar from '../layout/TabBar';
+import profileMenuLinks from '../../layout/Header/components/HeaderProfileMenu/profileMenuLinks';
+import TabBar from '../../layout/TabBar';
 
 export default function AccountPage() {
   return (

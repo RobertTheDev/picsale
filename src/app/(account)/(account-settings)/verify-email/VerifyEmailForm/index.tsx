@@ -4,7 +4,7 @@ import FormEmailInput from '@/app/layout/Form/FormEmailInput';
 import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import FormSuccessMessage from '../../../layout/Form/FormSuccessMessage';
+import FormSuccessMessage from '../../../../layout/Form/FormSuccessMessage';
 import { verifyEmailSchema, VerifyEmailSchemaType } from './schema';
 
 export default function VerifyEmailForm() {
