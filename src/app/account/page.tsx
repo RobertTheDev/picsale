@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { LuLogOut } from 'react-icons/lu';
+import { LuChevronRight } from 'react-icons/lu';
 import profileMenuLinks from '../layout/Header/components/HeaderProfileMenu/profileMenuLinks';
 import TabBar from '../layout/TabBar';
 
@@ -20,28 +20,20 @@ export default function AccountPage() {
               return (
                 <li key={link.href} className="w-full">
                   <Link
-                    className="flex h-12 w-full items-center rounded-lg bg-neutral-800 px-4 hover:bg-gray-800"
+                    className="flex h-12 w-full items-center justify-between rounded-lg bg-neutral-800 px-4 hover:bg-gray-800"
                     href={link.href}
                   >
                     <div className="flex items-center gap-5">
                       {link.icon}
                       <p>{link.name}</p>
                     </div>
+                    <div>
+                      <LuChevronRight size={28} />
+                    </div>
                   </Link>
                 </li>
               );
             })}
-            <li className="w-full">
-              <button
-                type="button"
-                className="flex h-12 w-full items-center rounded-lg bg-neutral-800 px-4 hover:bg-gray-800"
-              >
-                <div className="flex items-center gap-5">
-                  <LuLogOut size={20} />
-                  <p>Sign Out</p>
-                </div>
-              </button>
-            </li>
           </ul>
         </div>
       </div>
