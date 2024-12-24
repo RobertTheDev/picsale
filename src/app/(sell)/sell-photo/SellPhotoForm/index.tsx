@@ -1,10 +1,13 @@
 'use client';
 
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
+import FormTextInput from '@/app/layout/Form/FormTextInput';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 // Define the Zod schema for validation
@@ -32,7 +35,8 @@ type FormData = z.infer<typeof schema>;
 
 export default function SellPhotoForm() {
   const {
-    control,
+    // control,
+    register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
@@ -54,188 +58,197 @@ export default function SellPhotoForm() {
   });
 
   const onSubmit = (data: FormData) => {
-    console.log('Form Submitted:', data);
+    alert(JSON.stringify(data));
   };
 
+  const formSuccess = false;
+
   return (
-    <div className="mx-auto max-w-4xl rounded-lg bg-white p-6 shadow-md">
-      <h2 className="mb-4 text-2xl font-bold">Upload Image and Form Data</h2>
+    <div>
+      {formSuccess ? (
+        <FormSuccessMessage messageText="Photo successfully uploaded" />
+      ) : (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex h-auto flex-col p-12"
+        >
+          <div>
+            <h3 className="text-3xl font-bold">Sell Photo</h3>
+          </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {/* Category */}
-        <div className="mb-4">
-          <label
-            htmlFor="category"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Category
-          </label>
-          <Controller
-            name="category"
-            control={control}
-            defaultValue="wildlife"
-            render={({ field }) => (
-              <select
-                {...field}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              >
-                <option value="wildlife">Wildlife</option>
-                <option value="landscape">Landscape</option>
-                <option value="urban">Urban</option>
-              </select>
+          <div className="mb-4">
+            <label
+              htmlFor="image"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Image
+            </label>
+            <div
+              {...getRootProps()}
+              className="cursor-pointer border-2 border-dashed p-6 text-center"
+            >
+              <input {...getInputProps()} />
+              <p className="text-gray-500">
+                Drag and drop an image, or click to select one
+              </p>
+            </div>
+            {imagePreview && (
+              <div className="relative size-20">
+                <Image
+                  fill
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mx-auto mt-4 max-w-xs"
+                />
+              </div>
             )}
-          />
-          {errors.category && (
-            <p className="text-sm text-red-500">{errors.category.message}</p>
-          )}
-        </div>
+            {errors.image && (
+              <p className="text-sm text-red-500">{errors.image.message}</p>
+            )}
+          </div>
 
-        {/* Title */}
-        <div className="mb-4">
-          <label
-            htmlFor="title"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Title
-          </label>
-          <Controller
-            name="title"
-            control={control}
-            defaultValue="Golf Course in Portugal"
-            render={({ field }) => (
-              <input
-                {...field}
+          {/* TITLE */}
+          <div className="flex flex-col">
+            <div className="mt-8">
+              <FormTextInput
                 id="title"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              />
-            )}
-          />
-          {errors.title && (
-            <p className="text-sm text-red-500">{errors.title.message}</p>
-          )}
-        </div>
-
-        {/* Description */}
-        <div className="mb-4">
-          <label
-            htmlFor="description"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Description
-          </label>
-          <Controller
-            name="description"
-            control={control}
-            defaultValue="This is the description"
-            render={({ field }) => (
-              <textarea
-                {...field}
-                id="description"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                rows={4}
-              />
-            )}
-          />
-          {errors.description && (
-            <p className="text-sm text-red-500">{errors.description.message}</p>
-          )}
-        </div>
-
-        {/* Price */}
-        <div className="mb-4 grid grid-cols-2 gap-4">
-          <div>
-            <label
-              htmlFor="currency"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Currency
-            </label>
-            <Controller
-              name="price.currency"
-              control={control}
-              defaultValue="GBP"
-              render={({ field }) => (
-                <input
-                  {...field}
-                  id="currency"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
-              )}
-            />
-            {errors.price?.currency && (
-              <p className="text-sm text-red-500">
-                {errors.price.currency?.message}
-              </p>
-            )}
-          </div>
-
-          <div>
-            <label
-              htmlFor="amount"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Amount
-            </label>
-            <Controller
-              name="price.amount"
-              control={control}
-              defaultValue={1099}
-              render={({ field }) => (
-                <input
-                  {...field}
-                  id="amount"
-                  type="number"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
-              )}
-            />
-            {errors.price?.amount && (
-              <p className="text-sm text-red-500">
-                {errors.price.amount?.message}
-              </p>
-            )}
-          </div>
-        </div>
-
-        {/* Image Upload */}
-        <div className="mb-4">
-          <label
-            htmlFor="image"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Image
-          </label>
-          <div
-            {...getRootProps()}
-            className="cursor-pointer border-2 border-dashed p-6 text-center"
-          >
-            <input {...getInputProps()} />
-            <p className="text-gray-500">
-              Drag and drop an image, or click to select one
-            </p>
-          </div>
-          {imagePreview && (
-            <div className="relative size-20">
-              <Image
-                fill
-                src={imagePreview}
-                alt="Preview"
-                className="mx-auto mt-4 max-w-xs"
+                label="Name"
+                placeholder="Enter name"
+                register={register}
+                error={errors.title}
               />
             </div>
-          )}
-          {errors.image && (
-            <p className="text-sm text-red-500">{errors.image.message}</p>
-          )}
-        </div>
+            {/* DESCRIPTION */}
+            <div className="mt-8 flex w-full flex-col">
+              <label
+                htmlFor={'description'}
+                className="text-sm font-semibold text-white"
+              >
+                Description
+              </label>
+              <div className="mt-3">
+                <textarea
+                  id={'description'}
+                  {...register('description')}
+                  placeholder={'Enter description'}
+                  className={`w-full rounded-md border-2 bg-neutral-800 ${
+                    errors.description ? 'border-red-500' : 'border-neutral-500'
+                  } p-3 outline-none hover:border-neutral-400 ${
+                    errors.description
+                      ? 'focus:border-red-500'
+                      : 'focus:border-neutral-200'
+                  }`}
+                />
+              </div>
+              {errors.description && (
+                <p className="mt-3 text-sm font-medium text-red-500">
+                  {errors.description.message}
+                </p>
+              )}
+            </div>
+            {/* CATEGORY */}
+            <div className="mt-8 flex w-full flex-col">
+              <label
+                htmlFor={'description'}
+                className="text-sm font-semibold text-white"
+              >
+                Category
+              </label>
+              <div className="mt-3">
+                <select
+                  id={'category'}
+                  {...register('category')}
+                  className={`w-full rounded-md border-2 bg-neutral-800 ${
+                    errors.category ? 'border-red-500' : 'border-neutral-500'
+                  } h-12 p-3 outline-none hover:border-neutral-400 ${
+                    errors.category
+                      ? 'focus:border-red-500'
+                      : 'focus:border-neutral-200'
+                  }`}
+                >
+                  <option>Hello</option>
+                  <option>You</option>
+                </select>
+              </div>
+              {errors.category && (
+                <p className="mt-3 text-sm font-medium text-red-500">
+                  {errors.category.message}
+                </p>
+              )}
+            </div>
 
-        <button
-          type="submit"
-          className="w-full rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
-        >
-          Submit
-        </button>
-      </form>
+            {/* AMOUNT */}
+            <div className="mt-8 flex w-full flex-col">
+              <label
+                htmlFor={'currency'}
+                className="text-sm font-semibold text-white"
+              >
+                Currency
+              </label>
+              <div className="mt-3">
+                <select
+                  id={'currency'}
+                  {...register('price.currency')}
+                  className={`w-full rounded-md border-2 bg-neutral-800 ${
+                    errors.price?.currency
+                      ? 'border-red-500'
+                      : 'border-neutral-500'
+                  } h-12 p-3 outline-none hover:border-neutral-400 ${
+                    errors.price?.currency
+                      ? 'focus:border-red-500'
+                      : 'focus:border-neutral-200'
+                  }`}
+                >
+                  <option>GBP</option>
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+              </div>
+              {errors.price?.currency && (
+                <p className="mt-3 text-sm font-medium text-red-500">
+                  {errors.price?.currency.message}
+                </p>
+              )}
+            </div>
+
+            {/* PRICE AMOUNT */}
+            <div className="mt-8 flex w-full flex-col">
+              <label
+                htmlFor={'amount'}
+                className="text-sm font-semibold text-white"
+              >
+                Amount
+              </label>
+              <div className="mt-3">
+                <input
+                  id={'amount'}
+                  type="number"
+                  {...register('price.amount', { valueAsNumber: true })}
+                  placeholder={'Enter amount'}
+                  className={`w-full rounded-md border-2 bg-neutral-800 ${
+                    errors.price?.amount
+                      ? 'border-red-500'
+                      : 'border-neutral-500'
+                  } p-3 outline-none hover:border-neutral-400 ${
+                    errors.price?.amount
+                      ? 'focus:border-red-500'
+                      : 'focus:border-neutral-200'
+                  }`}
+                />
+              </div>
+              {errors.price?.amount && (
+                <p className="mt-3 text-sm font-medium text-red-500">
+                  {errors.price?.amount.message}
+                </p>
+              )}
+            </div>
+
+            <div className="mt-8 flex flex-1 flex-col">
+              <FormSubmitButton labelText="Upload Photo" loading={false} />
+            </div>
+          </div>
+        </form>
+      )}
     </div>
   );
 }
