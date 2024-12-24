@@ -1,8 +1,8 @@
 'use client';
 
-import SettingsFormEmailInput from '@/app/(settings)/components/SettingsFormEmailInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
-import SettingsFormSuccessMessage from '@/app/(settings)/components/SettingsFormSuccessMessage';
+import FormEmailInput from '@/app/layout/Form/FormEmailInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { changeEmailSchema, ChangeEmailSchemaType } from './schema';
@@ -25,7 +25,7 @@ export default function ChangeEmailForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Email successfully changed" />
+        <FormSuccessMessage messageText="Email successfully changed" />
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -36,16 +36,10 @@ export default function ChangeEmailForm() {
           </div>
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormEmailInput
-                register={register}
-                error={errors.email}
-              />
+              <FormEmailInput register={register} error={errors.email} />
             </div>
             <div className="mt-8 flex flex-1 flex-col">
-              <SettingsFormSubmitButton
-                labelText="Change Email"
-                loading={false}
-              />
+              <FormSubmitButton labelText="Change Email" loading={false} />
             </div>
           </div>
         </form>

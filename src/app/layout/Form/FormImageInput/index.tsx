@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { FieldError, UseFormRegister, UseFormSetValue } from 'react-hook-form';
 import { LuUser } from 'react-icons/lu';
 
-interface SettingsFormImageInputProps {
+interface FormImageInputProps {
   id: string;
   label: string;
   placeholderIcon: 'LuUser'; // Extend for more icons if needed
@@ -14,13 +14,13 @@ interface SettingsFormImageInputProps {
   setValue: UseFormSetValue<any>;
 }
 
-export default function SettingsFormImageInput({
+export default function FormImageInput({
   id,
   label,
   placeholderIcon,
   error,
   setValue,
-}: SettingsFormImageInputProps) {
+}: FormImageInputProps) {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [image, setImage] = useState<string | null>(null);
 

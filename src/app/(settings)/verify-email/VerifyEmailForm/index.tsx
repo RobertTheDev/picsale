@@ -1,10 +1,10 @@
 'use client';
 
-import SettingsFormEmailInput from '@/app/(settings)/components/SettingsFormEmailInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
+import FormEmailInput from '@/app/layout/Form/FormEmailInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import SettingsFormSuccessMessage from '../../components/SettingsFormSuccessMessage';
+import FormSuccessMessage from '../../../layout/Form/FormSuccessMessage';
 import { verifyEmailSchema, VerifyEmailSchemaType } from './schema';
 
 export default function VerifyEmailForm() {
@@ -25,7 +25,7 @@ export default function VerifyEmailForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Email successfully verified" />
+        <FormSuccessMessage messageText="Email successfully verified" />
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -36,16 +36,10 @@ export default function VerifyEmailForm() {
           </div>
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormEmailInput
-                register={register}
-                error={errors.email}
-              />
+              <FormEmailInput register={register} error={errors.email} />
             </div>
             <div className="mt-8 flex flex-1 flex-col">
-              <SettingsFormSubmitButton
-                labelText="Verify Email"
-                loading={false}
-              />
+              <FormSubmitButton labelText="Verify Email" loading={false} />
             </div>
           </div>
         </form>

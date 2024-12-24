@@ -1,8 +1,8 @@
 'use client';
 
-import SettingsFormPasswordInput from '@/app/(settings)/components/SettingsFormPasswordInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
-import SettingsFormSuccessMessage from '@/app/(settings)/components/SettingsFormSuccessMessage';
+import FormPasswordInput from '@/app/layout/Form/FormPasswordInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { closeAccountSchema, CloseAccountSchemaType } from './schema';
@@ -25,7 +25,7 @@ export default function CloseAccountForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Account successfully closed" />
+        <FormSuccessMessage messageText="Account successfully closed" />
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -41,7 +41,7 @@ export default function CloseAccountForm() {
           </div>
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormPasswordInput
+              <FormPasswordInput
                 id="currentPassword"
                 label="Current password"
                 placeholder="Enter your password"
@@ -52,7 +52,7 @@ export default function CloseAccountForm() {
             </div>
 
             <div className="mt-8 flex flex-1 flex-col">
-              <SettingsFormSubmitButton
+              <FormSubmitButton
                 destructive
                 labelText="Close Account"
                 loading={false}

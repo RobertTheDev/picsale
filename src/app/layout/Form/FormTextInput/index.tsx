@@ -2,7 +2,7 @@
 
 import { FieldError, UseFormRegister } from 'react-hook-form';
 
-interface SettingsFormTextInputProps {
+interface FormTextInputProps {
   id: string;
   label: string;
   placeholder: string;
@@ -11,13 +11,13 @@ interface SettingsFormTextInputProps {
   register: UseFormRegister<any>;
 }
 
-export default function SettingsFormTextInput({
+export default function FormTextInput({
   id,
   label,
   placeholder,
   error,
   register,
-}: SettingsFormTextInputProps) {
+}: FormTextInputProps) {
   return (
     <div className="mt-8 flex w-full flex-col">
       <label htmlFor={id} className="text-sm font-semibold text-white">

@@ -1,9 +1,9 @@
 'use client';
 
-import SettingsFormEmailInput from '@/app/(settings)/components/SettingsFormEmailInput';
-import SettingsFormPasswordInput from '@/app/(settings)/components/SettingsFormPasswordInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
 import { AuthModalContext } from '@/app/contexts/AuthModal';
+import FormEmailInput from '@/app/layout/Form/FormEmailInput';
+import FormPasswordInput from '@/app/layout/Form/FormPasswordInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
@@ -50,14 +50,11 @@ export default function SignUpForm() {
         >
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormEmailInput
-                register={register}
-                error={errors.email}
-              />
+              <FormEmailInput register={register} error={errors.email} />
             </div>
 
             <div className="mt-8">
-              <SettingsFormPasswordInput
+              <FormPasswordInput
                 id="password"
                 label="Password"
                 placeholder="Enter your password"
@@ -68,7 +65,7 @@ export default function SignUpForm() {
             </div>
 
             <div className="mt-8">
-              <SettingsFormSubmitButton loading={false} labelText="Sign Up" />
+              <FormSubmitButton loading={false} labelText="Sign Up" />
             </div>
           </div>
         </form>

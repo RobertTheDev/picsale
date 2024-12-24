@@ -1,8 +1,8 @@
 'use client';
 
-import SettingsFormPasswordInput from '@/app/(settings)/components/SettingsFormPasswordInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
-import SettingsFormSuccessMessage from '@/app/(settings)/components/SettingsFormSuccessMessage';
+import FormPasswordInput from '@/app/layout/Form/FormPasswordInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { changePasswordSchema, ChangePasswordSchemaType } from './schema';
@@ -25,7 +25,7 @@ export default function ChangePasswordForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Password successfully changed" />
+        <FormSuccessMessage messageText="Password successfully changed" />
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -36,7 +36,7 @@ export default function ChangePasswordForm() {
           </div>
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormPasswordInput
+              <FormPasswordInput
                 id="currentPassword"
                 label="Current password"
                 placeholder="Enter your current password"
@@ -46,7 +46,7 @@ export default function ChangePasswordForm() {
               />
             </div>
             <div className="mt-8">
-              <SettingsFormPasswordInput
+              <FormPasswordInput
                 id="newPassword"
                 label="New password"
                 placeholder="Enter your new password"
@@ -56,10 +56,7 @@ export default function ChangePasswordForm() {
               />
             </div>
             <div className="mt-8 flex flex-1 flex-col">
-              <SettingsFormSubmitButton
-                labelText="Change Password"
-                loading={false}
-              />
+              <FormSubmitButton labelText="Change Password" loading={false} />
             </div>
           </div>
         </form>

@@ -8,10 +8,7 @@ interface EmailInputProps {
   error?: FieldError;
 }
 
-export default function SettingsFormEmailInput({
-  register,
-  error,
-}: EmailInputProps) {
+export default function FormEmailInput({ register, error }: EmailInputProps) {
   return (
     <div className="flex w-full flex-col">
       <label htmlFor="email" className="text-sm font-semibold text-white">

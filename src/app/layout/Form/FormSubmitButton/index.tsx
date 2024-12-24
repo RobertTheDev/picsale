@@ -1,4 +1,4 @@
-export default function SettingsFormSubmitButton({
+export default function FormSubmitButton({
   loading,
   labelText,
   destructive = false,

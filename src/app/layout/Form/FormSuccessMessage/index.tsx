@@ -1,4 +1,4 @@
-export default function SettingsFormSuccessMessage({
+export default function FormSuccessMessage({
   messageText,
 }: {
   messageText: string;

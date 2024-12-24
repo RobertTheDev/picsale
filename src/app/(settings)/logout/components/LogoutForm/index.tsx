@@ -1,7 +1,7 @@
 'use client';
 
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
-import SettingsFormSuccessMessage from '@/app/(settings)/components/SettingsFormSuccessMessage';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
 
 export default function LogoutForm() {
   const formSuccess = false;
@@ -15,7 +15,7 @@ export default function LogoutForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Account successfully closed" />
+        <FormSuccessMessage messageText="Account successfully closed" />
       ) : (
         <form onSubmit={handleSubmit} className="flex h-auto flex-col p-12">
           <div>
@@ -27,7 +27,7 @@ export default function LogoutForm() {
           </div>
 
           <div className="mt-8 flex flex-1 flex-col">
-            <SettingsFormSubmitButton labelText="Logout" loading={false} />
+            <FormSubmitButton labelText="Logout" loading={false} />
           </div>
         </form>
       )}

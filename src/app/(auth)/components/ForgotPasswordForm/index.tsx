@@ -1,8 +1,8 @@
 'use client';
 
-import SettingsFormEmailInput from '@/app/(settings)/components/SettingsFormEmailInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
 import { AuthModalContext } from '@/app/contexts/AuthModal';
+import FormEmailInput from '@/app/layout/Form/FormEmailInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
@@ -52,14 +52,11 @@ export default function ForgotPasswordForm() {
         >
           <div className="flex flex-col">
             <div className="mt-8">
-              <SettingsFormEmailInput
-                register={register}
-                error={errors.email}
-              />
+              <FormEmailInput register={register} error={errors.email} />
             </div>
 
             <div className="mt-8">
-              <SettingsFormSubmitButton
+              <FormSubmitButton
                 loading={false}
                 labelText="Send Password Reset"
               />

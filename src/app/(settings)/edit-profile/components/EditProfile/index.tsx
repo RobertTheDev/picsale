@@ -1,9 +1,9 @@
 'use client';
 
-import SettingsFormImageInput from '@/app/(settings)/components/SettingsFormImageInput';
-import SettingsFormSubmitButton from '@/app/(settings)/components/SettingsFormSubmitButton';
-import SettingsFormSuccessMessage from '@/app/(settings)/components/SettingsFormSuccessMessage';
-import SettingsFormTextInput from '@/app/(settings)/components/SettingsFormTextInput';
+import FormImageInput from '@/app/layout/Form/FormImageInput';
+import FormSubmitButton from '@/app/layout/Form/FormSubmitButton';
+import FormSuccessMessage from '@/app/layout/Form/FormSuccessMessage';
+import FormTextInput from '@/app/layout/Form/FormTextInput';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -55,7 +55,7 @@ export default function EditProfileForm() {
   return (
     <div>
       {formSuccess ? (
-        <SettingsFormSuccessMessage messageText="Profile successfully updated" />
+        <FormSuccessMessage messageText="Profile successfully updated" />
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -66,7 +66,7 @@ export default function EditProfileForm() {
           </div>
           <div className="flex flex-col">
             {/* Avatar Upload */}
-            <SettingsFormImageInput
+            <FormImageInput
               id="avatar"
               label="Avatar"
               placeholderIcon="LuUser"
@@ -76,7 +76,7 @@ export default function EditProfileForm() {
             />
 
             {/* First Name */}
-            <SettingsFormTextInput
+            <FormTextInput
               id="firstName"
               label="First Name"
               placeholder="Please enter your first name"
@@ -85,7 +85,7 @@ export default function EditProfileForm() {
             />
 
             {/* Last Name */}
-            <SettingsFormTextInput
+            <FormTextInput
               id="lastName"
               label="Last Name"
               placeholder="Please enter your last name"
@@ -95,10 +95,7 @@ export default function EditProfileForm() {
 
             {/* Submit Button */}
             <div className="mt-8 flex flex-1 flex-col">
-              <SettingsFormSubmitButton
-                labelText="Update Profile"
-                loading={false}
-              />
+              <FormSubmitButton labelText="Update Profile" loading={false} />
             </div>
           </div>
         </form>

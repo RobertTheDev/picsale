@@ -14,7 +14,7 @@ interface PasswordInputProps {
   error?: FieldError;
 }
 
-export default function SettingsFormPasswordInput({
+export default function FormPasswordInput({
   id,
   label,
   placeholder,
