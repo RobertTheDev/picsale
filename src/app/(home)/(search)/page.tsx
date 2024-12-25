@@ -20,7 +20,7 @@ export default async function PhotoProductsList() {
   }
 
   return (
-    <ul className="mt-2 grid w-full grid-cols-2 gap-2 px-2 py-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul className="mt-2 grid w-full grid-cols-1 gap-6 px-4 py-4 md:grid-cols-3 lg:grid-cols-4">
       {photos.map((photo) => {
         return (
           <Suspense
