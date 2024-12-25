@@ -15,7 +15,7 @@ export const tabBarLinks: ITabBarLink[] = [
   },
   {
     href: '/purchases',
-    icon: <LuTag size={28} />,
+    icon: <LuImages size={28} />,
     name: 'purchases',
   },
   {
@@ -25,7 +25,7 @@ export const tabBarLinks: ITabBarLink[] = [
   },
   {
     href: '/listings',
-    icon: <LuImages size={28} />,
+    icon: <LuTag size={28} />,
     name: 'listings',
   },
   {
