@@ -49,7 +49,7 @@ export default async function CategoryPage({
   }
 
   return (
-    <ul className="mt-2 grid w-full grid-cols-2 gap-2 px-2 py-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul className="mt-2 grid w-full grid-cols-1 gap-2 px-2 py-2 md:grid-cols-3 lg:grid-cols-4">
       {filteredPhotos.map((photo) => {
         return (
           <Suspense
