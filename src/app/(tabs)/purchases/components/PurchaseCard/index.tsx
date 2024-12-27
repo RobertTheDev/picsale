@@ -3,19 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuDownload } from 'react-icons/lu';
+import handleDownload from '../../../../helpers/handleDownload';
 
 export default function PurchaseCard({
   props,
 }: {
   props: { id: string; url: string };
 }) {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = `/photos/${props.url}`;
-    link.download = props.url.split('/').pop() || 'download';
-    link.click();
-  };
-
   return (
     <Link href={`/purchases/${props.id}`}>
       <div className="flex w-full gap-6">
@@ -33,7 +27,7 @@ export default function PurchaseCard({
           </p>
           <button
             type="button"
-            onClick={handleDownload}
+            onClick={() => handleDownload(props.url)}
             className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-neutral-800 text-sm font-medium text-white"
           >
             <LuDownload size={20} />
