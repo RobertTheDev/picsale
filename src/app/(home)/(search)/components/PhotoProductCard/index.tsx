@@ -5,7 +5,7 @@ import { LuShoppingBasket } from 'react-icons/lu';
 
 export default function PhotoProductCard({ photo }: { photo: IPhoto }) {
   return (
-    <Link href={`/purchases/${photo.id}`}>
+    <Link href={`/photos/${photo.id}`}>
       <div className="flex w-full gap-6">
         <div className="relative aspect-square h-28 overflow-hidden rounded-xl">
           <Image
