@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import EditProfileForm from './components/EditProfile';
+import EditProfileForm from '../components/EditProfileForm';
 
 export const metadata: Metadata = {
   title: 'Edit Profile',

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import CloseAccountForm from './components/CloseAccountForm';
+import CloseAccountForm from '../components/CloseAccountForm';
 
 export const metadata: Metadata = {
   title: 'Close Account',

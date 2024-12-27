@@ -1,11 +1,6 @@
-import { LuLock, LuMail, LuMailCheck, LuPencil, LuTrash } from 'react-icons/lu';
+import { LuLock, LuMail, LuMailCheck, LuTrash } from 'react-icons/lu';
 
 const accountMenuLinks = [
-  {
-    name: 'Edit Profile',
-    href: '/edit-profile',
-    icon: <LuPencil size={24} />,
-  },
   {
     name: 'Change Email',
     href: '/change-email',

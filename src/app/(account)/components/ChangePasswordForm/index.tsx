@@ -29,7 +29,7 @@ export default function ChangePasswordForm() {
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex h-auto flex-col p-12"
+          className="flex h-auto w-full flex-col"
         >
           <div>
             <h3 className="text-3xl font-bold">Change Password</h3>

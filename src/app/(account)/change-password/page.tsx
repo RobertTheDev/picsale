@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ChangePasswordForm from './components/ChangePasswordForm';
+import ChangePasswordForm from '../components/ChangePasswordForm';
 
 export const metadata: Metadata = {
   title: 'Change Password',
