@@ -1,6 +1,6 @@
 import {
-  LuHouse,
   LuImages,
+  LuSearch,
   LuShoppingBasket,
   LuTag,
   LuUser,
@@ -10,8 +10,8 @@ import type ITabBarLink from '../interfaces/TabBarLink';
 export const tabBarLinks: ITabBarLink[] = [
   {
     href: '/',
-    icon: <LuHouse size={28} />,
-    name: 'home',
+    icon: <LuSearch size={28} />,
+    name: 'search',
   },
   {
     href: '/purchases',
