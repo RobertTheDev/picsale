@@ -1,4 +1,4 @@
-import PhotoProductCard from '@/app/(tabs)/(home)/components/PhotoProductCard';
+import PhotoProductCard from '@/app/(tabs)/(search)/components/PhotoProductCard';
 import { photos } from '@/app/data/photos';
 import { Metadata } from 'next';
 import Link from 'next/link';

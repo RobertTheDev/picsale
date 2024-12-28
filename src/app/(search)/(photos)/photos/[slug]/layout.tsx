@@ -1,4 +1,4 @@
-import MobileSearchHeader from '@/app/(tabs)/(home)/components/MobileSearchHeader';
+import MobileSearchHeader from '@/app/(tabs)/(search)/components/MobileSearchHeader';
 import { ReactNode } from 'react';
 
 export default function Layout({ children }: { children: ReactNode }) {

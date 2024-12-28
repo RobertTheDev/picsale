@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { LuRefreshCcw } from 'react-icons/lu';
 import PhotoProductCard from './components/PhotoProductCard';
 
-export default async function PhotoProductsList() {
+export default async function SearchPage() {
   if (photos.length < 1) {
     return (
       <div className="mt-16 flex w-full flex-col items-center">
