@@ -2,7 +2,7 @@ import { photos } from '@/app/data/photos';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { LuRefreshCcw } from 'react-icons/lu';
-import PhotoProductCard from '../../(home)/(search)/components/PhotoProductCard';
+import PhotoProductCard from './components/PhotoProductCard';
 
 export default async function PhotoProductsList() {
   if (photos.length < 1) {

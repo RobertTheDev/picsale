@@ -1,4 +1,4 @@
-import PhotoProductCard from '@/app/(home)/(search)/components/PhotoProductCard';
+import PhotoProductCard from '@/app/(tabs)/(home)/components/PhotoProductCard';
 import ISeller from '@/app/interfaces/Seller';
 import Image from 'next/image';
 import { LuUser } from 'react-icons/lu';
