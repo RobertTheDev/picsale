@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { LuHeart, LuSearch, LuShoppingBasket } from 'react-icons/lu';
+import { LuHeart, LuLayoutGrid, LuShoppingBasket } from 'react-icons/lu';
 
 export default function MobileSearchHeader({
   wishlist,
@@ -33,7 +33,7 @@ export default function MobileSearchHeader({
         )}
         {categories && (
           <Link href="/categories">
-            <LuSearch size={28} />
+            <LuLayoutGrid size={28} />
           </Link>
         )}
         {basket && (
