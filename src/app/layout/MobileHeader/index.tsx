@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { LuHeart, LuLayoutGrid, LuShoppingBasket } from 'react-icons/lu';
 
-export default function MobileSearchHeader({
+export default function MobileHeader({
   wishlist,
   categories,
   basket,

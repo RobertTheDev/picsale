@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
+import MobileHeader from '../../layout/MobileHeader';
 import TabBar from '../../layout/TabBar';
-import MobileSearchHeader from './components/MobileSearchHeader';
 import PhotoFilterMenu from './components/PhotoFilterMenu';
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <PhotoFilterMenu />
       </aside>
       <div className="flex w-full flex-col">
-        <MobileSearchHeader wishlist categories />
+        <MobileHeader wishlist categories />
         <main className="flex w-full flex-col md:ml-80 2xl:ml-96">
           {children}
         </main>
