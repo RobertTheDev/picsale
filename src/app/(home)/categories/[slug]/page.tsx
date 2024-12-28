@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { LuRefreshCcw } from 'react-icons/lu';
+import { categories } from '../categories';
 
 export async function generateMetadata({
   params,
@@ -16,8 +17,10 @@ export async function generateMetadata({
     throw new Error('Slug parameter is required');
   }
 
+  const category = categories.find((c) => c.slug === slug);
+
   return {
-    title: slug ? slug : 'Category',
+    title: category ? category.title : 'Category',
   };
 }
 

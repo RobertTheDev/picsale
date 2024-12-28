@@ -1,5 +1,10 @@
+import { Metadata } from 'next';
 import { categories } from './categories';
 import CategoryCard from './components/CategoryCard';
+
+export const metadata: Metadata = {
+  title: 'Categories',
+};
 
 export default function CategoriesPage() {
   return (
